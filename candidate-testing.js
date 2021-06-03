@@ -14,13 +14,30 @@ let candidateAnswers;
 
 
 function askForName() {
-  // TODO 1.1b: Ask for candidate's name //
-
+  // TODO 1.1b: Ask for candidate"s name //
+  const input = require("readline-sync");
+  let candidateName = input.question("Please enter your name: ");
+  console.log("Hello, " + candidateName);
 }
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-
+  question = "Who was the first American woman in space? "
+  correctAnswer = "Sally Ride"
+ 
+  const input = require("readline-sync");
+  candidateAnswer = input.question(question);
+  
+  //console.log("Correct Answer: " + correctAnswers[0]);
+  //questions = ["Who was the first American woman in space? ", "True or false: 5 kilometer == 5000 meters? ", "(5 + 3)/2 * 10 = ? ", "Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2? ", "What is the minimum crew size for the ISS? "];
+  //correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"];
+  //candidateAnswers = ["", "", "", "", ""];
+  //const input = require("readline-sync");
+  
+  
+  //questions.forEach ( = 0; i < cars.length; i++)
+  //candidateAnswers[0] = input.question(questions[0]);
+  //console.log("Correct Answer: " + correctAnswers[0]);
 
 }
 
@@ -31,6 +48,7 @@ function gradeQuiz(candidateAnswers) {
 
   let grade;
   
+  console.log("Correct Answer: " + correctAnswer);
 
   return grade;
 }
