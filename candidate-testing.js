@@ -19,14 +19,19 @@ function askForName() {
 }
 
 function askQuestion(candidateAnswers) {
-  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  // candidateAnswers = ["", "", "", "", ""];
+  // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer
 
-  for (i = 0; i < candidateAnswers.length; i++)
+  question = "Who was the first American woman in space? ";
+  correctAnswer = "Sally Ride";
+  candidateAnswer = input.question(question);
+  console.log(`Your answer: ${candidateAnswer}`);
+  console.log(`Correct Answer: ${correctAnswer}\n`);
+  candidateAnswers[0] = candidateAnswer;
+  
+  // TODO 1.2b Ask each question and store the user's responses within a loop. 
+  for (i = 1; i < candidateAnswers.length; i++)
   {
     candidateAnswers[i] = input.question(questions[i]);
-    candidateAnswer = candidateAnswers[i];
-    correctAnswer = correctAnswers[i];
     console.log(`Your answer: ${candidateAnswers[i]}`);
     console.log(`Correct Answer: ${correctAnswers[i]}\n`);
   }
@@ -34,7 +39,7 @@ function askQuestion(candidateAnswers) {
 }
 
 function gradeQuiz(candidateAnswers) {
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
+  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly
   let grade = 0;
  
   for (i = 0; i < candidateAnswers.length; i++)
