@@ -25,6 +25,7 @@ function askQuestion(candidateAnswers) {
   for (i = 0; i < candidateAnswers.length; i++)
   {
     candidateAnswers[i] = input.question(questions[i]);
+    correctAnswer = correctAnswers[i];
     console.log(`Your answer: ${candidateAnswers[i]}`);
     console.log(`Correct Answer: ${correctAnswers[i]}\n`);
   }
@@ -49,7 +50,6 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   let grade = gradeQuiz(askQuestion(candidateAnswers));
-  console.log(candidateAnswers);
 
   if (grade >= 80)
   {
